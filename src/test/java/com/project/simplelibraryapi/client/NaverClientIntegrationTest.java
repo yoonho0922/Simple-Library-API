@@ -32,9 +32,8 @@ class NaverClientIntegrationTest extends IntegrationTest {
 
         //then
         assertNotNull(response);
-        assertNotNull(response.getItems());
-        assertFalse(response.getItems().isEmpty());
-        assertEquals(display, response.getItems().size());
+        assertNotNull(response.items());
+        assertEquals(display, response.items().size());
     }
 
     @Test

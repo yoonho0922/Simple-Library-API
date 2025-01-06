@@ -1,13 +1,15 @@
 package com.project.simplelibraryapi.client.book;
 
 import java.util.List;
-import lombok.Getter;
+import lombok.Builder;
 
-@Getter
-public class NaverBookResponse {
-    private String lastBuildDate;
-    private int total;
-    private int start;
-    private int display;
-    private List<NaverBookItem> items;
+@Builder
+public record NaverBookResponse(
+    String lastBuildDate,
+    int total,
+    int start,
+    int display,
+    List<NaverBookItem> items
+) {
+
 }
