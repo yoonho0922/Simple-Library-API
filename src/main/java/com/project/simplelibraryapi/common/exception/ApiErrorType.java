@@ -9,7 +9,8 @@ import org.springframework.http.HttpStatus;
 public enum ApiErrorType {
     UNKNOWN("알 수 없는 오류가 발생했습니다.", HttpStatus.INTERNAL_SERVER_ERROR),
     BAD_REQUEST("잘못된 요청입니다.", HttpStatus.BAD_REQUEST),
-    EXTERNAL_API_ERROR("외부 API 요청 중 오류가 발생했습니다.", HttpStatus.INTERNAL_SERVER_ERROR);
+    EXTERNAL_API_ERROR("외부 API 요청 중 오류가 발생했습니다.", HttpStatus.INTERNAL_SERVER_ERROR),
+    NOT_FOUND("리소스를 찾을 수 없습니다.", HttpStatus.NOT_FOUND);
 
     private final String description;
     private final HttpStatus httpStatus;

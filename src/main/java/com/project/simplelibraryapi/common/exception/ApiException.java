@@ -1,12 +1,21 @@
 package com.project.simplelibraryapi.common.exception;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
-@AllArgsConstructor
 public class ApiException extends RuntimeException {
 
     private String errorMessage;
     private ApiErrorType errorType;
+
+    public ApiException(String errorMessage, ApiErrorType errorType) {
+        super(errorMessage);
+        this.errorMessage = errorMessage;
+        this.errorType = errorType;
+    }
+
+    public ApiException(ApiErrorType errorType) {
+        this.errorMessage = errorType.getDescription();
+        this.errorType = errorType;
+    }
 }
