@@ -10,5 +10,4 @@
 - SLA-0 : 에픽 브랜치
   - SLA-1: 외부 API 연동
   - SLA-2: API 구현
-  - SLA-3: Exception 핸들링
   - SLA-3: Circuit Breaker 적용
